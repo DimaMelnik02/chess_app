@@ -1,0 +1,29 @@
+.board{
+    display: grid;
+    position: relative;
+    grid-template-columns: calc(.25 * var(--tile-size)) calc(8 * var(--tile-size));
+    height: 60vh; /* Make the board responsive to screen height */
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.tiles{
+    display: grid;
+    grid-template-columns: repeat(8, var(--tile-size));
+    grid-template-rows: repeat(8, var(--tile-size));
+    /*width: calc(8 * var(--tile-size));*/
+    width: 100%; /* Ensure the tiles grid scales with the board */
+    height: 100%; /* Make the tiles grid height responsive */
+}
+
+.tile{
+    position: relative;
+}
+
+.tile--light{
+    background: var(--light-tile);
+}
+
+.tile--dark{
+    background: var(--dark-tile);
+}

@@ -1,0 +1,9 @@
+.ranks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--dark-tile);
+    font-size: calc(var(--tile-size) / 5); /* Adjust font size based on tile size */
+    margin-right: calc(var(--tile-size) / 8); /* Adjust spacing based on tile size */
+}
