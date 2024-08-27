@@ -1,16 +1,17 @@
-import { getCharacter } from '../../helper'
+//import { getCharacter } from '../../helper'
 import './Board.css'
+import Pieces from './Pieces/Pieces'
 import Files from './bits/Files'
 import Ranks from './bits/Ranks'
 
 const Board = () => {
 
     const ranks = Array(8).fill().map((x,i) => 8-i)
-    const files = Array(8).fill().map((x,i) => getCharacter(i))
+    const files = Array(8).fill().map((x,i) => i+1)
 
     const getClassName = (i,j) => {
         let c = ''
-        c += (i+j) % 2 === 0 ? 'tile--light' : 'tile--dark'
+        c += (i+j) % 2 === 0 ? 'tile--dark' : 'tile--light'
         return c
     }
 
@@ -26,6 +27,8 @@ const Board = () => {
                 )
             }
         </div>
+
+        <Pieces/>
 
         <Files files={files} />
     </div>
